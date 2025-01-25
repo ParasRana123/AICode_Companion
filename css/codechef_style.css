@@ -1,0 +1,113 @@
+#ai-assistant-ui {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #1e1e2f;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 10px;
+    z-index: 10000;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    transition: height 0.3s ease, width 0.3s ease;
+  }
+  
+  #ai-assistant-ui.minimized {
+    width: 200px;
+    height: 40px;
+  }
+  
+  #ai-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #333;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+  }
+  
+  #ai-header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #ai-header button:hover {
+    color: #4caf50;
+  }
+  
+  #chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+  }
+  
+  #chat-container.hidden {
+    display: none;
+  }
+  
+  #chat-messages {
+    flex: 1;
+    padding: 10px;
+    background-color: #333;
+    overflow-y: auto;
+    word-wrap: break-word;
+  }
+  
+  .chat-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    word-wrap: break-word;
+  }
+  
+  .chat-message.user {
+    background-color: #4caf50;
+    color: #fff;
+    align-self: flex-end;
+  }
+  
+  .chat-message.ai {
+    background-color: #444;
+    color: #fff;
+    align-self: flex-start;
+  }
+  
+  #chat-input-container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #222;
+  }
+  
+  #user-query {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    color: black;
+    background-color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  #send-query {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #send-query:hover {
+    background-color: #45a049;
+  }
