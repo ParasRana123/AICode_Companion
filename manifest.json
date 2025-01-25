@@ -1,0 +1,25 @@
+{
+    "manifest_version":3,
+    "name" : "AI Code Companion",
+    "version": "1.0.0",
+    "description" : "AI-powered Chrome extension offering intelligent hints , solutions , and insights for coding problems on LeetCode , Codechef , and Codeforces. Enhance your problem solving skills with real time assistance tailored to each platform's challenges.",
+    "permissions" : ["storage" , "scripting" , "activeTab"],
+    "host_permisisons" : ["https://127.0.0.1:5000/*"],
+    "content_scripts" : [
+        {
+            "matches" : ["https://leetcode.com/problems/*"],
+            "js" : ["js/content.js"],
+            "css" : ["css/style.css"]
+        },
+        {
+            "matches" : ["https://www.codechef.com/problems/*"],
+            "js" : ["js/codechef_content.js"],
+            "css" : ["css/codechef_style.css"]
+        },
+        {
+            "matches" : ["https://codeforces.com/problemset/problem/*"],
+            "js" : ["js/codeforces_content.js"],
+            "css" : ["css/codeforces_style.css"]
+        }
+    ]
+}
